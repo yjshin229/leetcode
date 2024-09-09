@@ -14,9 +14,9 @@ class Solution {
             list.add(new ArrayList<>(tempList));
         }else{ 
             for(int i = start; i < candidates.length; i++){
-                tempList.add(candidates[i]);
+                tempList.add(candidates[i]); //make choice
                 backtrack(list, tempList, candidates, remain - candidates[i], i); // not i + 1 because we can reuse same elements
-                tempList.remove(tempList.size() - 1);
+                tempList.remove(tempList.size() - 1); // undo --> backtrack
             }
         }
     }
