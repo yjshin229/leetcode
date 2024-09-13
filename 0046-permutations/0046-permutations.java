@@ -2,10 +2,10 @@ class Solution {
     public List<List<Integer>> permute(int[] nums) {
         List<List<Integer>> res = new ArrayList<>();
         
-//         if(nums.length == 1){
-//             res.add(new ArrayList<>(nums[0]));
-//             return res;
-//         }
+        if(nums.length == 1){
+            res.add(new ArrayList<>(Arrays.asList(nums[0])));
+            return res;
+        }
         backTrack(res, new ArrayList<>(), nums);
         return res;
     }
