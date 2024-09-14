@@ -34,9 +34,9 @@ var groupAnagrams = function(strs) {
     for (let i = 0; i < unique.length; i++){
         const target = unique[i];
         addDup(sorted, target);
-        strs = strs.filter((value, index) => !used.includes(index))
-        sorted = sorted.filter((value, index) => !used.includes(index))
-        used = []
+        // strs = strs.filter((value, index) => !used.includes(index))
+        // sorted = sorted.filter((value, index) => !used.includes(index))
+        // used = []
     }
     
     
