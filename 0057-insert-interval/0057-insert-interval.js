@@ -9,7 +9,6 @@ var insert = function(intervals, newInterval) {
     
     intervals.push(newInterval)
     intervals.sort((a,b) => a[0] -b[0])
-    // let used = false;
     
     let idx = 0
     
