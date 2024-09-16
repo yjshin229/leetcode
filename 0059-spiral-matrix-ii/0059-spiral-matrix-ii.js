@@ -28,6 +28,7 @@ var generateMatrix = function(n) {
            
             if(c === n-1 || res[r][c+1] !== 0){
                 changeMoveDirection();
+                r++;
             }else{
                c++; 
             }
@@ -41,6 +42,7 @@ var generateMatrix = function(n) {
            
             if( r === n -1 || res[r+1][c] !== 0){
                 changeMoveDirection();
+                c --;
             }else{
                 r++; 
             }
@@ -53,6 +55,7 @@ var generateMatrix = function(n) {
            
             if( c === 0 || res[r][c-1] !== 0){
                 changeMoveDirection();
+                r --;
             }else{
                 c --; 
             }
@@ -66,6 +69,7 @@ var generateMatrix = function(n) {
            
             if( r === 0 || res[r-1][c] !== 0){
                 changeMoveDirection();
+                c++;
             }else{
                 r --; 
             }
