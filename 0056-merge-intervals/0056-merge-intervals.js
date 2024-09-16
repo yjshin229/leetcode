@@ -5,10 +5,9 @@
 var merge = function(intervals) {
     
     intervals.sort((a, b) => (a[0] - b[0]));
-    console.log(intervals)
     let start = 0
     let end = intervals.length-1;
-    while(start < end){
+    while(start < intervals.length-1){
         if(intervals[start][1] >= intervals[start+1][0]){
             let temp = []
             if(intervals[start][1] > intervals[start+1][1]){
