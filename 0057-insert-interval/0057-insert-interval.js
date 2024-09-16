@@ -9,15 +9,12 @@ var insert = function(intervals, newInterval) {
     
     intervals.push(newInterval)
     intervals.sort((a,b) => a[0] -b[0])
-    let used = false;
+    // let used = false;
     
     let idx = 0
     
     while(idx < intervals.length -1){
-//         if(intervals[idx][0] <= newInterval[0] && intervals[idx+1][0] >= newInterval[0] && !used){
-//             intervals.splice(idx+1,0, newInterval)
-//             used = true
-//         }
+
         
         if(intervals[idx][1] >= intervals[idx+1][0]){
             let temp =[]
