@@ -9,7 +9,7 @@ var lengthOfLongestSubstring = function(s) {
     let right = 0
     
     while(right <=  s.length -1){
-        temp.add(s[right]);
+        temp.add(s.charAt(right));
         let tempSize = temp.size
         
         if(tempSize < right - left + 1){
