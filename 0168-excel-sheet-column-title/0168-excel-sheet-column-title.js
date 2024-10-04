@@ -11,10 +11,6 @@ var convertToTitle = function(columnNumber) {
         21: "U", 22: "V", 23: "W", 24: "X", 25: "Y", 
         26: "Z"
     }
-    // const quotient = Math.trunc(columnNumber / 26)
-    // const remainder = columnNumber % 26
-
-    // console.log(quotient, remainder)
 
     let res = ""
     while(columnNumber !== 0){
