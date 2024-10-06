@@ -7,7 +7,8 @@ var areSentencesSimilar = function(sentence1, sentence2) {
     if(sentence1 === sentence2) return true
     let sentence1Arr = sentence1.split(" ") 
     let sentence2Arr = sentence2.split(" ")
- let i = 0;
+
+    let i = 0;
     let j = 0;
     
     // Compare from the beginning
@@ -20,7 +21,6 @@ var areSentencesSimilar = function(sentence1, sentence2) {
         j++;
     }
 
-    // If the words from start and end match, and the difference can be inserted in between
     return i + j === Math.min(sentence1Arr.length, sentence2Arr.length);
     
 
