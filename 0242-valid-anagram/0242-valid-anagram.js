@@ -6,10 +6,28 @@
 var isAnagram = function(s, t) {
     if(s.length !== t.length) return false
     
-    let sArr = s.split("").sort()
-    let tArr = t.split("").sort()
+//     let sArr = s.split("").sort()
+//     let tArr = t.split("").sort()
     
-    if(sArr.join("") === tArr.join("")) return true
-    return false
+//     if(sArr.join("") === tArr.join("")) return true
+//     return false
     
+    let charMap = new Map();
+    
+    for(let i = 0; i < s.length ; i++){
+        charMap.set(s[i], charMap.get(s[i]) ? charMap.get(s[i]) + 1 : 1)
+        charMap.set(t[i], charMap.get(t[i]) ? charMap.get(t[i]) - 1 : -1)
+    }
+    
+    console.log(charMap)
+    
+    // let mapValue = []
+    for (const [key, val] of charMap) {
+    if (val !== 0) {
+        return false; // Exit the function or handle the condition
+    }
+}
+    return true;
+    
+   
 };
