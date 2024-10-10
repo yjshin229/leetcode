@@ -21,10 +21,9 @@ var isAnagram = function(s, t) {
     
     console.log(charMap)
     
-    // let mapValue = []
     for (const [key, val] of charMap) {
     if (val !== 0) {
-        return false; // Exit the function or handle the condition
+        return false; 
     }
 }
     return true;
