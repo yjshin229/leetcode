@@ -18,9 +18,7 @@ var isAnagram = function(s, t) {
         charMap.set(s[i], charMap.get(s[i]) ? charMap.get(s[i]) + 1 : 1)
         charMap.set(t[i], charMap.get(t[i]) ? charMap.get(t[i]) - 1 : -1)
     }
-    
-    console.log(charMap)
-    
+        
     for (const [key, val] of charMap) {
     if (val !== 0) {
         return false; 
