@@ -3,18 +3,6 @@
  * @return {number[]}
  */
 var getRow = function(rowIndex) {
-//     if(rowIndex === 0 ) return [1]
-//     if(rowIndex === 1) return [1,1]
-    
-//     let res = []
-//     for(let i =0; i < rowIndex; i++){
-//         if(i === 0 || i === rowIndex - 1){
-//             res.psuh(1)
-//         }else{
-            
-//         }
-//     }
-    
     let res = []
     for(let i = 0; i <= rowIndex; i++){
         if(i === 0){
