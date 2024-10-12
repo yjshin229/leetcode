@@ -8,9 +8,7 @@ var singleNumber = function(nums) {
     let seen = new Set()
     for (let i = 0; i < nums.length; i ++){
         const curr = nums[i]
-        
         nums[i] = NaN
-        console.log(seen.has(curr))
         if(!nums.includes(curr) && !seen.has(curr)) return curr
         seen.add(curr)
     }
