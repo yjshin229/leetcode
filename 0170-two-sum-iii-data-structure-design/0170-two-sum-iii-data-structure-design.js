@@ -16,13 +16,13 @@ TwoSum.prototype.add = function(number) {
  * @return {boolean}
  */
 TwoSum.prototype.find = function(value) {
-    let set = new Set()
+    let seen = new Set()
     for(const num of this.nums){
         let diff = value - num
-        if(set.has(diff)){
+        if(seen.has(diff)){
             return true
         }else{
-            set.add(num)
+            seen.add(num)
         }
     }
 
