@@ -12,19 +12,19 @@ var MovingAverage = function(size) {
  * @return {number}
  */
 MovingAverage.prototype.next = function(val) {
-    let sum = 0
-    if(this.arr.length < this.size){
-        this.arr.push(val)
-    }else{
-        this.arr.shift()
-        this.arr.push(val)
-    }
+    this.arr.push(val)
     
-    for(const num of this.arr){
-        sum += num
+    let sum = 0
+    let count = 0
+    for(let i = this.arr.length -1 ; i >=0; i--){
+        if(count === this.size) break
+        
+        count ++
+        sum += this.arr[i]
+    
     }
     console.log(sum)
-    return sum / this.arr.length
+    return sum / count
 };
 
 /** 
