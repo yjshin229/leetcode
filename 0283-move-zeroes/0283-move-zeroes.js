@@ -22,7 +22,7 @@ var moveZeroes = function(nums) {
         if(nums[left] === 0){
             swap(left, right);
             left ++;
-            right = left
+            right ++;
             continue
         }
         left ++;
