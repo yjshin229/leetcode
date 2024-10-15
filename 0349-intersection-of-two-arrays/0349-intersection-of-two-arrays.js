@@ -4,7 +4,6 @@
  * @return {number[]}
  */
 var intersection = function(nums1, nums2) {
-    console.log(nums1.concat(nums2))
     let intersection = new Set(nums1.concat(nums2))
     let intersectionArr = [...intersection]
 
