@@ -10,7 +10,6 @@ var findContentChildren = function(g, s) {
     let child = 0;
     let cookie = 0;
     
-    // Use two pointers to traverse both arrays
     while (child < g.length && cookie < s.length) {
         // If the current cookie can satisfy the current child
         if (s[cookie] >= g[child]) {
