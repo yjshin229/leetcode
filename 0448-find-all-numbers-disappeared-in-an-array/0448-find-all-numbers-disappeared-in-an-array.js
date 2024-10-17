@@ -5,7 +5,7 @@
 var findDisappearedNumbers = function(nums) {
     const n = nums.length
     let res = []
-    nums.sort()
+
      for (let i = 0; i < n; i++) {
         let index = Math.abs(nums[i]) - 1; // Get the index for the current number
         // Mark the number at this index as negative (if it's not already)
