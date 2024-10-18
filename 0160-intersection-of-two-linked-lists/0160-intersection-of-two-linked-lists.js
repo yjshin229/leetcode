@@ -13,9 +13,9 @@
  */
 var getIntersectionNode = function(headA, headB) {
     let listSet = new Set()
+    
     //traverse A first
     for(let current = headA; current; current = current.next){
-        // current.val = -current.val
         listSet.add(current)
     }
 
