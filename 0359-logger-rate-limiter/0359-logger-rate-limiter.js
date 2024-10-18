@@ -11,7 +11,6 @@ var Logger = function() {
  */
 Logger.prototype.shouldPrintMessage = function(timestamp, message) {
     if(!this.map[message]){
-        console.log(this.map[message])
         this.map[message] = timestamp + 10
         return true
     }else if(this.map[message] > timestamp){
