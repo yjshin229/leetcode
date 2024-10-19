@@ -3,7 +3,6 @@
  * @return {string[]}
  */
 var findRelativeRanks = function(score) {
-    let res = ""
     let temp = [...score].sort((a,b) => b-a)
     let medal = 1
     for(const num of temp){
