@@ -18,8 +18,8 @@ var minDepth = function(root) {
         if(!node.left && !node.right){
             return 1
         }
-        let leftDepth = dfs(node.left)
-        let rightDepth = dfs(node.right);
+        let leftDepth = node.left ? dfs(node.left) : Infinity; 
+        let rightDepth = node.right ? dfs(node.right) : Infinity;
 
         return Math.min(leftDepth, rightDepth) + 1
     }
