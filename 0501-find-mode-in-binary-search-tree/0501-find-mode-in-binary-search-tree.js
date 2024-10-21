@@ -12,11 +12,17 @@
  */
 var findMode = function(root) {
     let frequency = {}
-    let count = 0
-
+    let max = 0
+    let res = []
     const dfs = (node) => {
         frequency[node.val] = (frequency[node.val] || 0 )+ 1
-        count ++
+
+        if(frequency[node.val] > max){
+            res = [parseInt(node.val)]
+            max = frequency[node.val]
+        }else if(frequency[node.val] === max){
+            res.push(parseInt(node.val))
+        }
 
         if(node.left) dfs(node.left)
         if(node.right) dfs(node.right)
@@ -24,19 +30,7 @@ var findMode = function(root) {
     }
 
     dfs(root)
-    let max = 0
-    let res = []
-    console.log(frequency)
-    for(const key in frequency){
-        console.log(key)
-        let value = frequency[key]
-        if (value > max){
-            res = [parseInt(key)]
-            max = value
-        }else if(value === max){
-            res.push(parseInt(key))
-        }
-    }
+    
 
     return res
     
