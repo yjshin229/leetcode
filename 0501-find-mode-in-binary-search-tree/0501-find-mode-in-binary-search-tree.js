@@ -30,8 +30,6 @@ var findMode = function(root) {
     }
 
     dfs(root)
-    
-
     return res
     
 };
