@@ -4,15 +4,22 @@
  */
 var reverseBits = function(n) {
     let bits = n.toString(2)
-    if(bits.length < 32){
-        bits = ("0").repeat(32-bits.length) + bits
-    }
-    let res = 0
+    // if(bits.length < 32){
+    //     bits = ("0").repeat(32-bits.length) + bits
+    // }
+    // let res = 0
 
-    for(let i = 0; i < bits.length ; i++){
-        if(bits[i] === "1"){
-            res += Math.pow(2,i)
-        }
+    // for(let i = 0; i < bits.length ; i++){
+    //     if(bits[i] === "1"){
+    //         res += Math.pow(2,i)
+    //     }
+    // }
+    // return res
+    let ans = 0;
+    for (let i = 1; i <= 32; i++) {
+        ans = (ans << 1) | (n & 1);
+        n >>>= 1;
     }
-    return res
+    return ans >>> 0;
+
 };
