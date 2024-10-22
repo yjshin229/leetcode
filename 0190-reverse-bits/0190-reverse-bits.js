@@ -7,8 +7,6 @@ var reverseBits = function(n) {
     if(bits.length < 32){
         bits = ("0").repeat(32-bits.length) + bits
     }
-    console.log(bits)
-    let reversed = ""
     let res = 0
 
     for(let i = 0; i < bits.length ; i++){
