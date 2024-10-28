@@ -7,7 +7,6 @@
  */
 var merge = function(nums1, m, nums2, n) {
     if(!nums2.length) return nums1
-    // if(m === 1 && n === 1) return nums2
     const binarySearch = (target, length) => {
         let start = 0
         let end = length - 1
