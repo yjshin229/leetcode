@@ -17,7 +17,6 @@ var deleteDuplicates = function(head) {
     }
 
     seen = Array.from(seen)
-    // seen.sort((a,b) => a - b)
     let retList = new ListNode(0)
 
     let current = retList
