@@ -11,15 +11,20 @@
  */
 var deleteDuplicates = function(head) {
     let seen = new Set()
-    let retList = new ListNode(0)
-    let retCurr = retList
 
     for(let current = head; current; current = current.next){
-        if(!seen.has(current.val)){
-            seen.add(current.val)
-            retCurr.next = new ListNode(current.val)
-            retCurr = retCurr.next
-        }
+        seen.add(current.val)
+    }
+
+    seen = Array.from(seen)
+    // seen.sort((a,b) => a - b)
+    let retList = new ListNode(0)
+
+    let current = retList
+
+    for(const num of seen){
+        current.next = new ListNode(num)
+        current = current.next
     }
 
     return retList.next
