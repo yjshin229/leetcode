@@ -26,6 +26,6 @@ var possibleStringCount = function(word) {
         }
     }
 
-    return res === 0? 1 : res + 1
+    return res + 1
 
 };
