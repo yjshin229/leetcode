@@ -14,7 +14,7 @@ var reverseWords = function(s) {
     }
 
 
-    for(let i = 0; i <sArr.length; i++){
+    for(let i=0; i< sArr.length; i++){
         sArr[i] = reverseWord(sArr[i])
     }
 
