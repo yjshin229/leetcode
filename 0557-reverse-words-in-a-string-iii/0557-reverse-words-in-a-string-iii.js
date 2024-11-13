@@ -28,7 +28,7 @@ var reverseWords = function(s) {
 
 
     for(let i=0; i< sArr.length; i++){
-        sArr[i] = sArr[i].split("").reverse().join("")
+        sArr[i] = reverseWord(sArr[i])
     }
 
     return sArr.join(" ")
