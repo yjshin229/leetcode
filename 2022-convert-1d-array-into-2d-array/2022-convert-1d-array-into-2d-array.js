@@ -5,9 +5,8 @@
  * @return {number[][]}
  */
 var construct2DArray = function(original, m, n) {
-    if(n===original.length){
-        return [original]
-    }else if(original.length != m * n){
+    
+    if(original.length != m * n){
         return []
     }
 
